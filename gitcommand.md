@@ -95,9 +95,20 @@ exit    /退出
 build/      #忽略build/目录下的所有文件
 doc/*.txt   #会忽略doc/notes.txt但不包括doc/server/arch.txt
 
-
   ```
-## 实操
+   
+# git 分支
+```code
+git branch                            #列出所有本地分支
+git branch -r                         #列出所有远程分支
+git branch [branchname]               #新建一个分支，但仍然停留在当前分支
+git checkout -b [branch]              #新建一个分支并切换到该分支
+git merge [branch]                    #合并指定分支到当前分支
+git branch -d [branchname]            #删除分支
+git push origin --delete [branchname] #删除远程分支
+git branch -dr [remote/branch]        #删除远程分支
+```
+# 实操
 ```code
 cd ss 
 git clone https://github.com/takashiwangbh/c-.git
