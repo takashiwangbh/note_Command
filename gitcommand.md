@@ -34,6 +34,11 @@ git clone<远程仓库的url>
 git status
 ```
 
+#### 查看修改记录
+```code
+git diff
+```
+
 #### 将指定文件Stage（标记为将要被提交的文件）
 ```code
 git add<文件路径>
@@ -75,9 +80,9 @@ git commit --amend -m "新的提交信息"
 git branch
 ```
  
-#### 创建所有分支
+#### 创建分支
 ```code
-git branch <分支名字>
+git checkout -b <分支名字>
 ```
  
 #### 切换分支
@@ -122,9 +127,29 @@ git stash save "输入信息"
 git stash pop
 ```
 
-#### 签出指定的提交
+#### 撤销指定的提交（在硬盘上）
 ```code
-git checkout <提交的hash>
+git checkout <文件名>
+```
+
+#### 撤销git add的操作把文件从暂存区移除
+```code
+git reset <文件名>
+```
+
+#### 撤销所有的修改（硬盘和暂存区的修改）（HEAD表示最近的一次commit）
+```code
+git、 checkout HEAD <文件名>
+```
+
+#### 撤销回退一个git commit 操作
+```code
+git reset --soft HEAD~1
+```
+
+#### 同时撤销回退一个git add 和git commit操作
+```code
+git reset HEAD~1
 ```
 
 #### 撤销旧提交（revert不会修改旧提交历史，而是在工作树中生成与之前提交完全相反的修改）
@@ -135,6 +160,11 @@ git revert <旧提交的hash>
 #### 查看本地仓库中的所有操作
 ```code
 git reflog
+```
+
+#### 强迫push(个人分支可以使用，公有分支尽量别使用)
+```code
+git push -f
 ```
 
 
