@@ -64,6 +64,80 @@ git push
 ```code
 git pull
 ```
+
+#### 修改上一个提交
+```code
+git commit --amend -m "新的提交信息"
+``` 
+
+#### 查看所有分支
+```code
+git branch
+```
+ 
+#### 创建所有分支
+```code
+git branch <分支名字>
+```
+ 
+#### 切换分支
+```code
+git branch <分支名字>
+```
+
+#### 重命名分支 
+```code
+git branch -m <旧名字> <新名字>
+```
+ 
+ #### 删除分支
+ ```code
+git branch -d <分支名字>
+```
+
+#### 将分支变基（rebase）到master（注：变基需要先切换到分支）
+```code
+git checkout <分支名字>
+git rebase master
+```
+
+#### 使用快进（fast-forward）将分支合并到master
+```code
+git checkout <分支名字>
+git merge --ff-only master
+```
+
+#### 中止这一次提交的合并（当遇到冲突）
+```code
+git merge --abort
+```
+
+#### 将未提交的修改暂存（stash）
+```code
+git stash save "输入信息"
+```
+
+#### 将上一个暂存的修改恢复并从暂存列表中删除
+```code
+git stash pop
+```
+
+#### 签出指定的提交
+```code
+git checkout <提交的hash>
+```
+
+#### 撤销旧提交（revert不会修改旧提交历史，而是在工作树中生成与之前提交完全相反的修改）
+```code
+git revert <旧提交的hash>
+```
+
+#### 查看本地仓库中的所有操作
+```code
+git reflog
+```
+
+
 ________________
 _____________
 # git bash
