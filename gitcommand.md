@@ -211,8 +211,9 @@ git merge [branch]                    #合并指定分支到当前分支
 git branch -d [branchname]            #删除分支
 git push origin --delete [branchname] #删除远程分支
 git branch -dr [remote/branch]        #删除远程分支
-```
-# 实操
+``` 
+
+# 实操1
 ```code
 cd ss 
 git clone https://github.com/takashiwangbh/c-.git
@@ -222,4 +223,27 @@ git add .   #添加所有文件到暂存区
 git status  #显示文件信息，显示 有文件新添加到暂存区
 git commit -m "just a test"     #提交暂存区中的内容到本地仓库
 git push        #提交到远程仓库
-```
+``` 
+
+# 实操2
+```code
+//在项目里创建自己的分支
+git clone https://github.com/takashiwangbh/code_learning.git
+git checkout -b my-test
+git diff
+git add test.md
+git commit -m "just a test 2"
+git push origin my-test
+//如果main远端有更新，同步到我的分支,将我的支线的更新合并到最新的main里
+git checkout main
+git pull origin master
+git checkout my-test
+git rebase main
+git push -f origin my-test
+//删除本地分支
+git checkout main
+git branch -D my-test
+//将远端和本地代码同步
+git pull origin master
+
+``` 
