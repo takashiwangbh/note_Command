@@ -21,3 +21,15 @@ python --version //检查python版本
 conda remove -n your_env_name --all //删除虚拟环境
 
 conda remove --name $your_env_name  $package_name //删除虚拟环境中的包
+
+nvidia-smi 查看GPU信息
+
+
+```python
+import torch
+print("CUDA是否可用：", torch.cuda.is_available())
+print("GPU数量：", torch.cuda.device_count())
+print("当前GPU设备索引：", torch.cuda.current_device())
+print("获取GPU设备(索引为0)：", torch.cuda.device(0))
+print("当前GPU设备名称：", torch.cuda.get_device_name(0))
+```
