@@ -33,3 +33,5 @@ print("当前GPU设备索引：", torch.cuda.current_device())
 print("获取GPU设备(索引为0)：", torch.cuda.device(0))
 print("当前GPU设备名称：", torch.cuda.get_device_name(0))
 ```
+
+# 0503
