@@ -247,3 +247,5 @@ git branch -D my-test
 git pull origin master
 
 ``` 
+
+ -f 强行推送
