@@ -24,6 +24,7 @@ conda remove --name $your_env_name  $package_name //删除虚拟环境中的包
 
 nvidia-smi 查看GPU信息
 
+python --version //查看python版本
 
 ```python
 import torch
