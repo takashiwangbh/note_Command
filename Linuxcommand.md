@@ -26,6 +26,10 @@ nvidia-smi 查看GPU信息
 
 python --version //查看python版本
 
+python -c "import torch; print(torch.__version__)" //打印pytorch版本
+
+conda remove -n deeplearing_test --all //删除虚拟环境
+
 ```python
 import torch
 print("CUDA是否可用：", torch.cuda.is_available())
@@ -35,4 +39,4 @@ print("获取GPU设备(索引为0)：", torch.cuda.device(0))
 print("当前GPU设备名称：", torch.cuda.get_device_name(0))
 ```
 
-# 0505
+# 0513
