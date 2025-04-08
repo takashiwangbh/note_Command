@@ -250,5 +250,9 @@ git pull origin master
 
  -f 强行推送
 
+
+# Mac 安装git
+git --version
+
  # 0816
  # 20250408
