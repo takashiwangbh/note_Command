@@ -250,6 +250,20 @@ git pull origin master
 
  -f 强行推送
 
+### 
+GitHub 从 2021 年 8 月起，不再支持账号密码推送
+用 Token 替代密码（推荐）
+打开 GitHub 网站，进入：
+https://github.com/settings/tokens
+
+点击右上角 “Generate new token”，选择：
+
+Note: 写个名字比如 Mac Git Token
+
+Expiration: 选 30 days / 90 days / No expiration 都可以
+
+勾选权限：最少勾 repo（表示允许访问仓库）
+### 
 
 # Mac 安装git
 git --version
