@@ -263,6 +263,23 @@ Note: 写个名字比如 Mac Git Token
 Expiration: 选 30 days / 90 days / No expiration 都可以
 
 勾选权限：最少勾 repo（表示允许访问仓库）
+
+##
+切换成 SSH 模式 来避免权限问题。
+git remote set-url origin git@github.com:takashiwangbh/note_Command.git
+
+ssh-keygen -t ed25519 -C "your_email@example.com"
+一路回车不用输密码
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+查看公钥内容：
+cat ~/.ssh/id_ed25519.pub
+复制完在github上添加
+ https://github.com/settings/keys
+ 检查联通性
+ ssh -T git@github.com
+ 如果出现 hi 用户名   就成功了
+
 ### 
 
 # Mac 安装git
