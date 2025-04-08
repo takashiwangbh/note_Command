@@ -279,11 +279,31 @@ cat ~/.ssh/id_ed25519.pub
  检查联通性
  ssh -T git@github.com
  如果出现 hi 用户名   就成功了
-
 ### 
+
+## 推送
+git add .
+git commit -m "your message"
+git push origin main（or master）
 
 # Mac 安装git
 git --version
 
+
+## 为什么不会推送错误
+
+每个 Git 项目（repo）在你 git clone 下来的时候，Git 会在这个文件夹里创建一个叫 .git 的隐藏文件夹。
+
+这个 .git 里面记录了这个项目的所有 Git 配置，比如：
+
+当前的远程仓库地址（remote origin）
+
+当前所在分支
+
+提交历史等
+
+你可以通过这个命令查看它指向的远程仓库：git remote -v
+
+查看当前地文件址：pwd
  # 0816
  # 20250408
